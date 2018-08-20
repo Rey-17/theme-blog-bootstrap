@@ -1,11 +1,12 @@
-<h3 class="pb-3 mb-4 font-italic border-bottom">
+
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
             From the Firehose
           </h3>
 
           <div class="blog-post">
-            <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2 class="blog-post-title"><?php the_title(); ?></h2>
             <p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
-            <?php the_excerpt(); ?>
+            <?php the_content(); ?>
           </div><!-- /.blog-post -->
 
           <!--div class="blog-post">
@@ -21,5 +22,3 @@
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
           </div--><!-- /.blog-post -->
-
-          

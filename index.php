@@ -45,12 +45,21 @@
     <main role="main" class="container">
       <div class="row">
 
+      <div class="col-md-8 blog-main">
       <?php 
       if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <div class="col-md-8 blog-main">
+      
         <?php get_template_part( 'content', get_post_format() );  ?>
+        
+      <?php endwhile;
+      ?>
+      <nav class="blog-pagination">
+        <li><?php next_posts_link( 'Previous' ); ?></li>
+		    <li><?php previous_posts_link( 'Next' ); ?></li>
+      </nav>
       </div>
-      <?php endwhile; endif;
+      <?php
+      endif;
       ?>
 
         <?php get_sidebar(); ?>
